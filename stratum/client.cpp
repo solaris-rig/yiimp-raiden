@@ -262,6 +262,7 @@ bool client_authorize(YAAMP_CLIENT *client, json_value *json_params)
 	}
 
 	// when auto exchange is disabled, only authorize good wallet address...
+	/*
 	if (!g_autoexchange && !client_validate_user_address(client)) {
 
 		clientlog(client, "bad mining address %s", client->username);
@@ -273,6 +274,7 @@ bool client_authorize(YAAMP_CLIENT *client, json_value *json_params)
 
 		return false;
 	}
+	*/
 
 	client_send_result(client, "true");
 	client_send_difficulty(client, client->difficulty_actual);
