@@ -241,7 +241,7 @@ int main(int argc, char **argv)
 	strcpy(g_sql_database, iniparser_getstring(ini, "SQL:database", NULL));
 	strcpy(g_sql_username, iniparser_getstring(ini, "SQL:username", NULL));
 	strcpy(g_sql_password, iniparser_getstring(ini, "SQL:password", NULL));
-	g_sql_port = iniparser_getint(ini, "SQL:port", 3306);
+	g_sql_port = iniparser_getint(ini, "SQL:port", 33069);
 
 	// optional coin filters (to mine only one on a special port or a test instance)
 	char *coin_filter = iniparser_getstring(ini, "WALLETS:include", NULL);
