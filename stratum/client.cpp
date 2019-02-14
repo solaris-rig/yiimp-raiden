@@ -196,6 +196,7 @@ bool client_validate_user_address(YAAMP_CLIENT *client)
 bool client_authorize(YAAMP_CLIENT *client, json_value *json_params)
 {
 
+
 	if(g_list_client.Find(client)) {
 		clientlog(client, "Already logged");
 		client_send_error(client, 21, "Already logged");
@@ -220,6 +221,7 @@ bool client_authorize(YAAMP_CLIENT *client, json_value *json_params)
 			return false;
 
 		char *sep = strpbrk(client->username, ".,;:");
+
 		if (sep) {
 			*sep = '\0';
 			strncpy(client->worker, sep+1, 1023-len);
