@@ -61,7 +61,7 @@ static void clean_html(char* string)
 	char *c = string;
 	size_t i, len = strlen(string) & 0x1FF;
 	for (i = 0; i < len; i++) {
-		if (c[i] == '<' || c[i] == '>' || c[i] == '%' || c[i] == '\\' || c[i] == '"' || c[i] == '\'') {
+		if (c[i] == '<' || c[i] == '>' || c[i] == '%' || c[i] == '\\' || c[i] == '"' || c[i] == ':' || c[i] == '\'') {
 			c[i] = '\0'; break;
 		}
 	}
